@@ -1,0 +1,82 @@
+<head>
+    <meta http-equiv="UTF-8" content="text/html; charset=ISO-8859-1">
+    <title>登录界面2</title>
+    <style>
+        .all{
+            height: 292px;
+            width: 356px;
+            position: absolute;
+            background-color: #FFFFFF;
+            top: 50%;
+            left: 50%;
+            margin: -178px 0 0 -178px;
+        }
+        .all h1{
+            display: inline-block;
+            text-align: center;
+            font-size: 28px;
+            margin-top: 52px;
+            width: 100%;
+            height:0;
+        }
+         .context{
+            /* height:100;
+            width: 100;   */
+            display: inline-block;
+            top:50%;
+            left:50%;
+            transform: translate(22%, 31%);
+            /* padding: -500px 0 0 -500px; */
+        } 
+        /* .main {
+
+        } */
+        .main td{ 
+            /* border:1px solid red; */
+            text-align: justify;
+            /* width:100px;
+            height: 100px; */
+        }
+        .main td i{
+            display:inline-block;
+            width:100%;
+        }
+        /* .signin_button{
+            
+        } */
+    </style>
+</head>
+
+<body style="background-image: url(./img/3.jpg);background-repeat:no-repeat; background-attachment: fixed; background-size:100% 100%;">
+    <!-- <center> -->
+    <!-- <br><br><br><br><br><br> -->
+    <!-- <div class="login"> -->
+    <div class="all">
+        <h1 style="color:rgb(22, 13, 7)">Login</h1>
+        <!-- <br> -->
+        <div class="context">
+            <table Border="0" class="main" cellspacing="10">
+                <tr>
+                    <td id="uname">用户名<i></i></td>
+                    <td><input type="text" name="username" tabindex="1"></td>
+                </tr>
+                <tr>
+                    <td id="pwd">密码<i></i></td>
+                    <td><input type="password" name="password" tabindex="2">
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <div>
+                <span class="signin_button">
+                    <input type="submit" value="登录" style="height:30px; width:245px; background-color:white;" />
+                </span>
+
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+    <!-- </center> -->
+</body>
+
+</html>

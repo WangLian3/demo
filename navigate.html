@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" charset="UTF-8" language="javascript" src="./jquery-3.3.1/jquery-3.3.1.js"></script>
+    <title>Document</title>
+    <script type="text/javascript">
+        var $navlist = $('.links');//获取导航列表
+
+        var itemTop = [];
+        for (var i = 1; i <= 4; i++) {
+            itemTop[i] = $('.part' + i).offset().top;//获取对应模块距离顶部的距离
+        }
+
+        //监听滚动条事件
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop();//滚动条距离顶部的距离
+
+            for (i = 0; i <= itemTop.length; i++) {
+                if (scrollTop >= itemTop[i + 1] - 450) {//判断大小
+                    $navlist.eq(i).addClass('active').siblings('a').removeClass('active');
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            JQuery实现导航菜单栏随滚动条上下滚动
+        </div>
+    </div>
+    <div class="placeholder"></div>
+    <div class="nav">
+        <div class="ul-box">
+            <ul class="links">
+                <li>
+                    <a href="http://www.baidu.com" target="_blank" class="cur">小巷阁楼</a>
+                </li>
+                <li>
+                    <a href="http://www.baidu.com" target="_blank">生活随笔</a>
+                </li>
+                <li>
+                    <a href="http://www.baidu.com" target="_blank">技术分享</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+
+
+</html>

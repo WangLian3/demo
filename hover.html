@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>hover 用法之图片交互</title>
+    <style>
+        .test {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            width: 200px;
+            height: 200px;
+            background: url("./img/1.jpg") no-repeat center 0 transparent;
+            /*在class为test的框内该图片只出现一次，如果去掉这行代码，图片会重复出现，填满整个框*/
+        }
+
+        .test:hover {
+            background: url("./img/2.jpg") no-repeat center 0 transparent;
+            /*鼠标移到class为test的框内之后，它的背景图片就变成另一张了*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test"></div>
+</body>
+
+</html>
