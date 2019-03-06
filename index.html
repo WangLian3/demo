@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .input-container {
+            width: 200px;
+            background: #f0f0f0;
+            position: relative;
+        }
+
+        #input_name {
+            margin-top: 20px;
+            width: 100%;
+            height: 30px;
+        }
+
+        #input_label {
+            position: absolute
+        }
+
+        #input_name2 {
+            margin-top: 20px;
+            width: 100%;
+            height: 30px;
+        }
+
+        #input_label2 {
+            position: absolute
+        }
+
+        .input-float-blur {
+            top: 26px;
+            left: 10px;
+            font-size: 16px;
+
+            transition: all 1.5s;
+        }
+
+        .input-float-focus {
+            top: 3px;
+            left: 2px;
+            font-size: 14px;
+            transition: all 1.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-container">
+        <input type="text" id="input_name">
+        <span id="input_label" class="input-float-blur">姓名</span>
+    </div>
+
+    <!-- <div class="input-container">
+        <input type="text" name="" id="input_name2">
+        <span id="input_label2" class="input-float-blur">密码</span>
+    </div> -->
+    <script>
+        (function() {
+
+            const $input = document.getElementById('input_name')
+
+            var inputFocus = false
+            // 聚焦时的样式
+            const FOCUS_CLASS = 'input-float-focus'
+            // 失去聚焦的样式
+            const BLUR_CLASS = 'input-float-blur'
+            // 聚焦
+            $input.addEventListener('focus', function() {
+                inputFocus = true
+                test('input_label')
+            }, false)
+            // 失去聚焦
+            $input.addEventListener('blur', function(){
+                inputFocus = false
+                test('input_label')
+            }, false)
+
+
+            function test(id){
+                const $inputLabel = document.getElementById(id)
+                $inputLabel.className = inputFocus 
+                ? FOCUS_CLASS
+                : BLUR_CLASS 
+
+                const seed = setInterval(function(){
+
+                }, 500)
+            }
+        })()
+    </script>
+</body>
+</html>
